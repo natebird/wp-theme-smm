@@ -1,50 +1,30 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the id=main div and all content
- * after.  Calls sidebar-footer.php for bottom widgets.
- *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
- */
-?>
-	</div><!-- #main -->
-
-	<div id="footer" role="contentinfo">
-		<div id="colophon">
-
-<?php
-	/* A sidebar in the footer? Yep. You can can customize
-	 * your footer with four columns of widgets.
-	 */
-	get_sidebar( 'footer' );
-?>
-
-			<div id="site-info">
-				&copy; 2009-2011
-				<a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>. 
-				All rights reserved.
-			</div><!-- #site-info -->
-
-			<div id="site-credits">
-				Theme by <a href="http://natebird.me/" rel="designer">Nate Bird</a> at <a href="http://lucidi.us/" rel="designer">Lucidius</a>.
-			</div><!-- #site-credits -->
-
-		</div><!-- #colophon -->
-	</div><!-- #footer -->
-
-</div><!-- #wrapper -->
-
-<?php
-	/* Always have wp_footer() just before the closing </body>
-	 * tag of your theme, or you will break many plugins, which
-	 * generally use this hook to reference JavaScript files.
-	 */
-
-	wp_footer();
-?>
-
+		</div><!-- End Main row -->
+		
+		<footer id="content-info" role="contentinfo">
+			<div class="row">
+				<?php dynamic_sidebar("Footer"); ?>
+			</div>
+			<div class="row">
+				<div class="four columns">
+					&copy; 2008-<?php echo date('Y'); ?> All rights reserved.
+				</div>
+				<?php wp_nav_menu(array('theme_location' => 'utility_navigation', 'container' => false, 'menu_class' => 'eight columns footer-nav')); ?>
+			</div>
+		</footer>
+			
+	</div><!-- Container End -->
+	
+	<!-- Included JS Files of Foundation -->
+	<script src="<?php echo get_template_directory_uri(); ?>/js/foundation.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script>
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+	<?php wp_footer(); ?>
 </body>
 </html>

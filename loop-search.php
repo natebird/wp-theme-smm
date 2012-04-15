@@ -11,36 +11,17 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header>
 			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			<?php reverie_entry_meta(); ?>
+			<?php reverie_entry_meta(); ?>	
 		</header>
 		<div class="entry-content">
-	<?php if (is_archive() || is_search()) : // Only display excerpts for archives and search ?>
-		<?php the_excerpt(); ?>
-	<?php else : ?>
-		<?php the_content('Continue reading...'); ?>
-	<?php endif; ?>
+			<?php the_content('Continue reading...'); ?>
 		</div>
 		<footer>
-			<div class="categorized">
-				<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p class="tags"><?php the_tags("Posted in "); ?></p><?php } ?>				
-			</div>
-			<div class="sociable">
-				<a href="#respond" class="add_comment">Add a Comment</a>
-				<a href="#" class="social_network_share">Share With A Friend</a>	
-			</div>
-			<div class="share_bubble">
-				<ul>
-					<li class="email"><a href="#"></a></li>
-					<li class="twitter"><a href="#"></a></li>
-					<li class="facebook"><a href="#"></a></li>
-					<li class="google"><a href="#"></a></li>
-					<li class="stumbleupon"><a href="#"></a></li>
-					<li class="pinterest"><a href="#"></a></li>
-				</ul>
-			</div>
+			<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
 		</footer>
 		<div class="divider"></div>
-	</article>	
+	</article>
+
 <?php endwhile; // End the loop ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>

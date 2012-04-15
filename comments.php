@@ -1,107 +1,93 @@
-<?php
-/**
- * The template for displaying Comments.
- *
- * The area of the page that contains both current comments
- * and the comment form.  The actual display of comments is
- * handled by a callback to twentyten_comment which is
- * located in the functions.php file.
- *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
- */
-?>
+<?php function reverie_comments($comment, $args, $depth) {
+	$GLOBALS['comment'] = $comment; ?>
+	<li <?php comment_class(); ?>>
+		<article id="comment-<?php comment_ID(); ?>">
+			<header class="comment-author vcard">
+				<?php echo get_avatar($comment,$size='40'); ?>
+				<?php printf(__('<cite class="fn">%s</cite>', 'reverie'), get_comment_author_link()) ?>
+				<time datetime="<?php echo comment_date('c') ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s', 'reverie'), get_comment_date(),  get_comment_time()) ?></a></time>
+				<?php edit_comment_link(__('(Edit)', 'reverie'), '', '') ?>
+			</header>
+			
+			<?php if ($comment->comment_approved == '0') : ?>
+       			<div class="notice">
+					<p class="bottom"><?php _e('Your comment is awaiting moderation.', 'reverie') ?></p>
+          		</div>
+			<?php endif; ?>
+			
+			<section class="comment">
+				<?php comment_text() ?>
+			</section>
+			
+			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+			
+		</article>
+<?php } ?>
 
-			<div id="comments">
-<?php if ( post_password_required() ) : ?>
-				<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'twentyten' ); ?></p>
-			</div><!-- #comments -->
 <?php
-		/* Stop the rest of comments.php from being processed,
-		 * but don't kill the script entirely -- we still have
-		 * to fully load the template.
-		 */
+// Do not delete these lines
+	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
+		die (__('Please do not load this page directly. Thanks!', 'reverie'));
+
+	if ( post_password_required() ) { ?>
+	<section id="comments">
+		<div class="notice">
+			<p class="bottom"><?php _e('This post is password protected. Enter the password to view comments.', 'reverie'); ?></p>
+		</div>
+	</section>
+	<?php
 		return;
-	endif;
+	}
 ?>
-
-<?php
-	// You can start editing here -- including this comment!
-?>
-
+<?php // You can start editing here. Customize the respond form below ?>
 <?php if ( have_comments() ) : ?>
-			<h3 id="comments-title"><?php
-			printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'twentyten' ),
-			number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' );
-			?></h3>
-
-<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<div class="navigation">
-				<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'twentyten' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?></div>
-			</div> <!-- .navigation -->
-<?php endif; // check for comment navigation ?>
-
-			<ol class="commentlist">
-				<?php
-					/* Loop through and list the comments. Tell wp_list_comments()
-					 * to use twentyten_comment() to format the comments.
-					 * If you want to overload this in a child theme then you can
-					 * define twentyten_comment() and that will be used instead.
-					 * See twentyten_comment() in twentyten/functions.php for more.
-					 */
-					wp_list_comments( array( 'callback' => 'twentyten_comment' ) );
-				?>
-			</ol>
-
-<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<div class="navigation">
-				<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'twentyten' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?></div>
-			</div><!-- .navigation -->
-<?php endif; // check for comment navigation ?>
-
-<?php else : // or, if we don't have comments:
-
-	/* If there are no comments and comments are closed,
-	 * let's leave a little note, shall we?
-	 */
-	if ( ! comments_open() ) :
-?>
-	<p class="nocomments"><?php _e( 'Comments are closed.', 'twentyten' ); ?></p>
-<?php endif; // end ! comments_open() ?>
-
-<?php endif; // end have_comments() ?>
-
-  <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="respond">
-  <?php cancel_comment_reply_link() ?>
-  	<textarea name="comment" id="comment" rows="10" tabindex="4"></textarea>
-  
-  	<div class="rules">What's on your mind? Tell me. All comments are screened for appropriateness. Good comments will be cherished, bad comments will be deleted.</div>
-  	
-  	<div class="form group">	
-  	
-  	<?php if ( $user_ID ) : ?>
-  		<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Log out &raquo;</a></p>
-  	<?php else : ?>
-  
-  		<p><label for="author"><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-  			<small>Name</small> <?php if ($req) echo "<span>(required)</span>"; ?></label></p>
-  
-  		<p><label for="email"><input type="email" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-  			<small>Email</small> <span>(<?php if ($req) echo "required, "; ?>not published)</span></label></p>
-  
-  		<p><label for="url"><input type="url" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-  			<small>Website</small> <span>(not required)</span></label></p>
-  
-  <?php endif; ?>
-  
-  	<p><input name="submit" type="submit" id="submit" tabindex="5" value="submit" />
-  		<?php comment_id_fields(); ?>
-  	</p>
-  		<?php do_action('comment_form', $post->ID); ?>
-  	</div>
-  </form>
-
-</div><!-- #comments -->
+	<section id="comments">
+		<h3><?php comments_number(__('No Responses to', 'reverie'), __('One Response to', 'reverie'), __('% Responses to', 'reverie') ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
+		<ul class="commentlist">
+		<?php wp_list_comments('type=comment&callback=reverie_comments'); ?>
+		<?php // wp_list_comments(); ?>
+		</ul>
+		<footer>
+			<nav id="comments-nav">
+				<div class="comments-previous"><?php previous_comments_link( __( '&larr; Older comments', 'reverie' ) ); ?></div>
+				<div class="comments-next"><?php next_comments_link( __( 'Newer comments &rarr;', 'reverie' ) ); ?></div>
+			</nav>
+		</footer>
+	</section>
+<?php else : // this is displayed if there are no comments so far ?>
+	<?php if ( comments_open() ) : ?>
+	<?php else : // comments are closed ?>
+	<section id="comments">
+		<div class="notice">
+			<p class="bottom"><?php _e('Comments are closed.', 'reverie') ?></p>
+		</div>
+	</section>
+	<?php endif; ?>
+<?php endif; ?>
+<?php if ( comments_open() ) : ?>
+<section id="respond">
+	<h3><?php comment_form_title( __('Leave a Reply', 'reverie'), __('Leave a Reply to %s', 'reverie') ); ?></h3>
+	<p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
+	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
+	<p><?php printf( __('You must be <a href="%s">logged in</a> to post a comment.', 'reverie'), wp_login_url( get_permalink() ) ); ?></p>
+	<?php else : ?>
+	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="nice">
+		<?php if ( is_user_logged_in() ) : ?>
+		<p><?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'reverie'), get_option('siteurl'), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'reverie'); ?>"><?php _e('Log out &raquo;', 'reverie'); ?></a></p>
+		<?php else : ?>
+		<p>
+			<input type="text" class="input-text" name="author" id="author" placeholder="<?php _e('Name', 'reverie'); if ($req) _e(' (required)', 'reverie'); ?>" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
+			<input type="email" class="input-text" name="email" id="email" placeholder="<?php _e('Email', 'reverie'); if ($req) _e(' (required)', 'reverie'); ?>" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
+			<input type="url" class="input-text" name="url" id="url" placeholder="<?php _e('Website', 'reverie'); ?>" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3">
+		</p>
+		<?php endif; ?>
+		<p>
+			<textarea name="comment" id="comment" rows="5" placeholder="<?php _e('Comment', 'reverie'); ?>" tabindex="4"></textarea>
+		</p>
+		<p><input name="submit" class="button" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'reverie'); ?>"></p>
+		<?php comment_id_fields(); ?>
+		<?php do_action('comment_form', $post->ID); ?>
+	</form>
+	<?php endif; // If registration required and not logged in ?>
+</section>
+<?php endif; // if you delete this the sky will fall on your head ?>

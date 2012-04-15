@@ -4,7 +4,8 @@
 		<div id="content" class="eight columns" role="main">
 	
 			<div class="post-box">
-				<?php get_template_part('loop', 'single'); ?>
+				<h1><?php _e('Search Results for', 'reverie'); ?> "<?php echo get_search_query(); ?>"</h1>
+				<?php get_template_part('loop', 'search'); ?>
 			</div>
 
 		</div><!-- End Content row -->
