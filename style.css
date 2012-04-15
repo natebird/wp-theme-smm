@@ -1,0 +1,433 @@
+/*
+Theme Name: SMM
+Description: A Child Theme of Twenty Ten for Simply Modern Mom
+Theme URI: http://natebird.me
+Author: Nate Bird
+Author URI: http://natebird.me
+Template: twentyten
+Version: 1.0.1
+*/
+@import url(../twentyten/style.css);
+
+body,input,textarea,.page-title span,.pingback a.url,h3#comments-title,h3#reply-title,#access .menu,#access div.menu ul,#cancel-comment-reply-link,.form-allowed-tags,#wp-calendar,.comment-meta,.comment-body tr th,.comment-body thead th,.entry-content label,.entry-content tr th,.entry-content thead th,.entry-meta,.entry-title,.entry-utility,#respond label,.navigation,.page-title,.pingback p,.reply,.widget_search label,.widget-title,input[type=submit]
+{ font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; height:100%;  }
+
+#header { clear:both; padding: 0; position: relative;}
+
+#site-title {
+  margin-left: 192px;
+  margin-bottom: 40px;
+  color: #FFF;
+  height: 70px;
+  background: url(http://www.simplymodernmom.com/wp-content/uploads/2009/11/smm-logotype.gif) no-repeat;
+  text-align: center;
+  width: 615px;
+}
+#site-title span a {  display: none;}
+#site-description {  display: none;}
+
+a:link, a:visited { color: #900000; text-decoration: none;}
+a:link:hover, a:active { color: #d51610; }
+
+#branding { width: 100%;}
+
+#wrapper { padding: 0; width: 1000px;}
+
+#container {
+ float: left;
+ padding-right: 20px;
+ margin: -1px;
+ width: 655px;
+ border-right: 1px solid #999;
+}
+
+#content {
+  margin-right: 0;
+  margin-top: 50px;
+  font: 15px/20px Georgia, "Times New Roman", Times, serif;
+}
+
+#content textarea, .textwidget textarea {
+  overflow: hidden;
+  font-size: 11px;
+  line-height: normal;
+}
+
+#content tr td {
+	border-top: 0px solid #e7e7e7;
+	padding: 6px 5px 6px 10px;
+}
+.entry-content {
+  width: 600px; 
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+/* One Column Layout */
+#container.one-column {
+ border-right: 0px solid #999;
+ padding-right: 0px;
+ width: 1000px;
+}
+#container.one-column #content {
+  margin-top: 50px;
+  width: 740px;
+}
+#container.one-column .entry-content {
+ width: 730px;
+}
+
+#main {
+  border: 1px solid #999;
+  width: 998px;
+  padding-top: 0px;
+  margin-top: 20px;
+  border-top-width: 0;
+  position: relative;
+  top: -30px;
+}
+
+
+/* Sidebars */
+#primary, #secondary { position: relative;top: 30px;width: 303px;}
+
+.widget-area {
+  border-left: 1px solid #999;
+  padding: 20px 10px 10px;
+  width: 280px;
+  height:100%; 
+}
+
+#main .widget-area ul {
+  padding: 0;
+}
+#main .widget-area ul li ul {
+  list-style-type: none;
+  list-style-image: none;
+  margin-left: 0;
+}
+#main .widget-area ul li ul a {
+  color: #555;
+}
+.widget-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.widget_tag_cloud a {
+  color: #666;
+}
+
+.center { text-align: center;}
+#text-19 .textwidget {text-align: center;}  /* Sponsor widget */ 
+
+.follow-icons { text-align: center; margin-top: 5px;}
+.follow-icons a { padding: 0 1px; line-height: 24px;}
+
+#searchform input#s { width: 220px;}
+#searchsubmit {text-transform: uppercase; font: bold 12px/24px Helvetica, "Helvetica Neue", Arial, sans-serif; color: #fff; background: #900; border: 0px; padding: 0 5px;}
+#searchsubmit:hover { background: #d51610;}
+
+
+#colophon {
+  border-top: 0px solid #999;
+  margin-top: 0px;
+  width: 980px;
+  padding: 18px 0;
+  overflow: hidden;
+}
+
+#site-info {
+  width: 700px;
+  font-weight: normal;
+  font-style: normal;
+}
+#site-info a {
+  color: #333;
+  text-decoration: underline;
+}
+
+
+#site-credits {
+  float: right;
+  width: 260px;
+  text-align: right;
+  font-size: 14px;
+}
+
+#site-credits a {
+  color: #333;
+  text-decoration: underline;
+  line-height: 16px;
+  text-decoration: underline;
+}
+
+
+/* Images ---------- */
+#content img {
+  max-width: 590px;
+}
+
+/* Hack for Tutorials, Made, and Recipe pages. 
+   The images really should be just 240x240. -- */
+.page-id-210 #content img, .page-id-1205 #content img, .page-id-11157 #content img {
+  height: 240px;
+  width: 240px;
+}
+
+#content .wp-caption {
+  background: #fff;
+  line-height: 14px;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+#content .wp-caption img {
+  margin: 5px 5px 0;
+}
+#content .wp-caption p.wp-caption-text {
+  color: #333;
+  font-size: 11px;
+}
+
+/* Entry Adjustments ---------- */
+.entry-utility {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #808080;
+}
+
+/* Comments */
+.entry-utility span.comments-link {
+  position: relative;
+  top: 10px;
+  left: 39.5%;
+}
+.entry-utility span.comments-link a {
+  color: #fff;
+  padding: 5px 10px 5px 25px;
+  border: 5px solid #fff;
+  background: #900 url(speech-bubble.png) no-repeat 5px;
+  font-weight: bold;
+}
+.entry-utility span.comments-link a:hover { background-color: #d51610;}
+h3#comments-title { text-align: center; padding-top: 0px; }
+.comment-triangle { margin-left: 50px; width: 15px; height: 15px; background: #e5e5e5 url(comment-corner.png) no-repeat; }
+.comment-body { background: #e5e5e5; padding: 15px; color: #666;}
+.commentlist li.comment {border-bottom: 0px solid #e7e7e7;}
+.comment-meta { font-style: italic; margin: 0;}
+
+/* comment form */
+#comments { width: 600px; margin: 0 auto;}
+#comments textarea { padding: 10px; width: 550px; height: 100px; border: 15px solid #999; margin: 0 0 -5px;}
+#comments form {width: 600px; background: #e5e5e5; margin-bottom: 1em;}
+#comments form p { margin: 0; }
+#comments form .rules { background: url(comment-form-corner.png) no-repeat top right ; width: 190px; float: left; padding: 15px 15px; color: #666; font-size: 14px; line-height: 1.35em;}
+
+#comments form .form {  float: left; width: 360px; padding: 17px 0 0 17px;}
+#comments form .form input, #comments form .form small {  float: left;}
+#comments form .form small { text-transform: uppercase; margin-left: 1em; font: bold 12px/2em Helvetica, "Helvetica Neue", Arial, sans-serif; color: #777;}
+#comments form .form span { font: italic 11px/2em Helvetica,"Helvetica Neue",Arial,sans-serif; padding-left: .5em; color: #999;}
+#comments form .form label { clear: both; }
+#comments form .form p { padding-bottom: 1em; clear:left; }
+#comments form .form input { height: 1.28em; }
+#comments form #submit { height: 2em; margin-bottom: 2em;}
+
+#respond input { width:auto;}
+#respond textarea {width:550px; font: 15px/22px Georgia, serif; color: #444;}
+input[type="email"],input[type="url"] {
+  padding: 2px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+}
+a#cancel-comment-reply-link { margin-left: 15px; }
+
+/* = Article Navigation
+-------------------------------------------------------------- */
+#nav-below{  margin: 0 auto; }
+.navigation{width:600px;margin:0 auto;clear:both;height:auto; position: relative;padding-top: 15px; font: 14px/4em Georgia, "Times New Roman", Times, serif;}
+.navigation span { display: block; }
+.navigation .arrow{ margin-top:-10px;color:#e5e5e5; position:absolute; display:block;float:left;z-index:1000; font-family: Georgia, serif;}
+.navigation .arrow,.navigation a:link .arrow,.navigation a:visited .arrow{color:#e5e5e5; font-size: 120px;}
+.navigation a:hover .arrow, .navigation a:active .arrow {color:#900;}
+.navigation a { position: absolute;}
+.navigation .nav-next .arrow { right: 0; }
+
+.navigation .nav-next, .navigation .nav-prev { width:50%; min-height: 4em; }
+
+.navigation .title {color:#900;clear:both;font-size: 1.3em;font-weight: bold; width: 230px; overflow: hidden; line-height: normal;}
+.navigation .nav-previous .title {  margin-left: 70px;}
+.navigation .nav-next .title { margin-right: 70px;float: right;}
+.navigation a:hover .title, .navigation a:active .title {color:#d51610;}
+
+.navigation .date {margin-left:6em; clear:both;font-size: .86em; line-height: 2em; font-style: italic; color: #333; }
+.navigation .nav-next .date { margin-right: 6em; text-align: right; margin-left: auto; }
+.navigation .nav-previous .date { margin-right: 6em; text-align: right; margin-left: auto; }
+.navigation a:hover .link .date { color: #C00; }
+
+
+/* =Menu
+-------------------------------------------------------------- */
+#access .menu-header li, div.menu li {
+  width: 107px;
+  text-align: center;
+  border-right: 1px solid #f9f9f9;
+  padding: 5px 0;
+}
+#access .menu-header li#menu-item-7260, 
+#access .menu-header li#menu-item-7266, 
+#access .menu-header li#menu-item-7268, 
+#access .menu-header li#menu-item-7267 {
+  border-right: none;
+}
+#access .menu-header li#menu-item-7268 { width: 137px; z-index: -1; }
+#access .menu-header li#menu-item-7267 {
+  position: absolute;
+  top: 65px;
+  left: 430px;
+  width: 140px;
+  height: 130px;
+  background: url(http://www.simplymodernmom.com/wp-content/uploads/2009/11/smm_logo.png) no-repeat;
+}
+#access .menu-header li#menu-item-7267:hover > a { background: none;}
+#access .menu-header li#menu-item-7267 > a { color: #900000; height: 125px; text-indent: -9000px;}
+#menu-navigation { width: 1000px;}
+
+/* -------------------------------------------------------------- */
+
+#access {
+  background: #eee;
+  margin: 0 0 50px;
+  width: 1000px;
+  display:block;
+  float:left;
+  padding: 0;
+}
+#access .menu-header, div.menu {
+  font-size: 1.5em;
+  margin-left: 0px;
+}
+#access .menu-header ul, div.menu ul {
+  list-style: none;
+  margin: 0px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+#access a {
+  display:block;
+  text-decoration:none;
+  color:#575858;
+  padding: 0;
+  line-height: 38px;
+  font-weight: normal;
+}
+#access ul ul {
+  display:none;
+  position:absolute;
+  top:38px;
+  left:0;
+  float:left;
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+  z-index: 99999;
+}
+#access ul ul li {
+  min-width: 180px;  
+}
+#access ul ul ul {
+  left:100%;
+  top:0;
+}
+#access ul ul a {
+  background:#eee;
+  height:auto;
+  line-height:1em;
+  padding:10px;
+  width: 160px;
+}
+#access li:hover > a,
+#access ul ul :hover > a {
+  color:#900000;
+  background:#eee;
+}
+#access ul li:hover > ul {
+  display:block;
+}
+#access ul li.current_page_item > a,
+#access ul li.current-menu-ancestor > a,
+#access ul li.current-menu-item > a,
+#access ul li.current-menu-parent > a {
+  color: #575858;
+}
+
+* html #access ul li.current_page_item a,
+* html #access ul li.current-menu-ancestor a,
+* html #access ul li.current-menu-item a,
+* html #access ul li.current-menu-parent a,
+* html #access ul li a:hover {
+  color:#900000;
+}
+
+#content .entry-title { text-align: center; font: bold 23px Georgia, "Times New Roman", Times, serif;}
+#content h1.entry-title { color: #333333;}
+#content h2.entry-title a { color: #900000;}
+#content .entry-title a:hover { color: #C00000;}
+
+.entry-meta { 
+  text-align: center;
+  color: #999999;
+  font: italic 12px Georgia, "Times New Roman", Times, serif;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.entry-meta a { color: #333;}
+
+/* Drop caps */
+.cap{
+  display      : block;
+  float        : left;
+  margin-top   : -0.5em; /* use -0.25em for two lines */
+  margin-left  : .20em;
+  margin-right : 0.5em;
+  height       : 3em;}
+.cap span{
+  font-size    : 3.3em;   /* use 3.12em for two lines */
+  line-height  : 1.0em;
+  color: #444;}
+.cap + span{ margin-left  : .20em; }
+.cap a { color: #900; }
+.cap a:hover { color: #C00; }
+
+/* Linkwithin & sociable styles */
+.linkwithin_text, .sociable, .sociable h3 { margin-bottom: 15px; color: #333; text-transform: uppercase;font: bold 11pt Helvetica, "Helvetica Neue", Arial, sans-serif;}
+#linkwithin_logo_0, #linkwithin_logo_1, #linkwithin_logo_2, #linkwithin_logo_3, #linkwithin_logo_4, #linkwithin_logo_5, div#linkwithin_logo_6 { display: none;}
+#lws_0, #lws_1, #lws_2, #lws_3, #lws_4, #lws_5, #lws_6 { height: 225px;}
+
+/*Sociable plugin styles*/
+.sociable {margin: 10px 0 20px;}
+#content .sociable_tagline h3 { margin-bottom: 0px; height: auto;}
+.sociable ul {
+  display: inline;
+  margin: -10px !important;
+  padding: 0px !important;
+}
+.sociable ul li {
+  background: none;
+  display: inline !important;
+  list-style-type: none;
+  margin: 0px 0px 0px 15px;
+  padding: 10px;
+}
+.sociable a { color: #999; }
+.sociable a:hover { color: #C00; }
+
+pre {
+	background: #ffffff;
+	line-height: normal;
+	margin-bottom: 0px;
+	padding: 0em;
+}
