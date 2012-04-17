@@ -81,7 +81,7 @@
 					'link_before' => '',
 					'link_after' => '',
 					'depth' => 0,
-					'items_wrap' => '<dl class="nav hide-on-phones">%3$s</dl>',
+					'items_wrap' => '<dl class="nav">%3$s</dl>',
 					'walker' => new description_walker())
 				); ?>
 			</nav>
