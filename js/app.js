@@ -38,6 +38,10 @@ jQuery(document).ready(function ($) {
 	    $(this).remove();
 	  });
 	});
+	
+	$('.social_network_share').click(function() {
+	  $(this).closest('footer').find('.share_bubble').fadeIn();
+	});
 
 
 	/* PLACEHOLDER FOR FORMS ------------- */
