@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+		
+		<?php get_sidebar(); ?>
 
 		<!-- Row for main content area -->
 		<div id="content" class="eight columns" role="main">
@@ -15,12 +17,10 @@
 						<?php single_cat_title(); ?>
 					<?php endif; ?>
 				</h1>
-				<hr>
 				<?php get_template_part('loop', 'category'); ?>
 			</div>
 
 		</div><!-- End Content row -->
 		
-		<?php get_sidebar(); ?>
 		
 <?php get_footer(); ?>

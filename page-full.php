@@ -3,6 +3,8 @@
 Template Name: Full Width
 */
 get_header(); ?>
+		
+		<?php get_sidebar(); ?>
 
 		<!-- Row for main content area -->
 		<div id="content" class="twelve columns" role="main">
@@ -12,7 +14,5 @@ get_header(); ?>
 			</div>
 
 		</div><!-- End Content row -->
-		
-		<?php get_sidebar(); ?>
-		
+				
 <?php get_footer(); ?>
