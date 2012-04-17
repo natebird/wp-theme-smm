@@ -258,6 +258,8 @@ body.page #content .post-box h1, body.archive #content .post-box h1 {
 	color: #333;
 	font-family: Quicksand, Helvetica, Arial, sans-serif;
 	font-size: 1.1rem;
+	z-index: 1;
+	background-color: white;
 }
 .comment-count a {
 	color: #555555;
@@ -582,4 +584,7 @@ input.button:hover {
 
 @media handheld, only screen and (max-width: 767px) {
 	h1 { font-size: 32px; font-size: 3.2rem; line-height: 2.7; }
+}
+@media handheld, only screen and (max-width: 1024px) {
+	.comment-count { left: 0px; }
 }
