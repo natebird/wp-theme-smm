@@ -39,8 +39,9 @@ jQuery(document).ready(function ($) {
 	  });
 	});
 	
-	$('.social_network_share').click(function() {
-	  $(this).closest('footer').find('.share_bubble').fadeIn();
+	$('.social_network_share').click(function(event) {
+    event.preventDefault();
+	  $(this).closest('footer').find('.share_bubble').fadeToggle();
 	});
 
 
