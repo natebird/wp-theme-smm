@@ -15,9 +15,9 @@
 	
 	<!-- Included Foundation CSS Files -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.css">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/app.css">
 	
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css">
@@ -62,39 +62,40 @@
 	<!-- Start the main container -->
 	<div id="container" class="container" role="document">
 		
-		<!-- Row for blog navigation -->
-		<div class="row">
-			<header class="twelve columns" role="banner">
-				<nav role="navigation">
-					<?php /*
-						You can use Foundation Tabs to get a better responsive design.
-					    Our navigation menu. If one isn't filled out, wp_nav_menu falls
-					    back to wp_page_menu. The menu assigned to the primary position is
-					    the one used. If none is assigned, the menu with the lowest ID is
-					    used. */
-						
-					    wp_nav_menu( array(
-						'theme_location' => 'primary_navigation',
-						'container' =>false,
-						'menu_class' => '',
-						'echo' => true,
-						'before' => '',
-						'after' => '',
-						'link_before' => '',
-						'link_after' => '',
-						'depth' => 0,
-						'items_wrap' => '<dl class="nav hide-on-phones">%3$s</dl>',
-						'walker' => new description_walker())
-					); ?>
-				</nav>
-			</header>
-		</div>
+		<header role="banner">
+			<nav role="navigation">
+				<?php /*
+					You can use Foundation Tabs to get a better responsive design.
+				    Our navigation menu. If one isn't filled out, wp_nav_menu falls
+				    back to wp_page_menu. The menu assigned to the primary position is
+				    the one used. If none is assigned, the menu with the lowest ID is
+				    used. */
+					
+				    wp_nav_menu( array(
+					'theme_location' => 'primary_navigation',
+					'container' =>false,
+					'menu_class' => '',
+					'echo' => true,
+					'before' => '',
+					'after' => '',
+					'link_before' => '',
+					'link_after' => '',
+					'depth' => 0,
+					'items_wrap' => '<dl class="nav hide-on-phones">%3$s</dl>',
+					'walker' => new description_walker())
+				); ?>
+			</nav>
+		</header>
 		
 		<!-- Row for main content area -->
 		<div id="main" class="row">
-			<div class="eight columns">
+			<div id="logo" class="eight columns">
 				<div class="reverie-header">
-					<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-					<h4 class="subheader"><?php bloginfo('description'); ?></h4>
+					<h1>
+						<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+							<span class="blog-name"><?php bloginfo('name'); ?></span>
+							<img src="<?php bloginfo('template_directory'); ?>/images/header.png" alt="simply modern mom" />
+						</a>
+					</h1>
 				</div>
 			</div>
