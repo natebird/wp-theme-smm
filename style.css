@@ -33,7 +33,7 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 	dl.nav dd.current-post-ancestor a,
 	dl.nav dd.current-menu-parent a,
 	dl.nav dd.current-post-parent a
-	 { background: #2A85E8; color: #fff; }
+	 { border-top: 5px solid #C9505A; padding-top: 15px; color: #000000;}
  
 	/* Foundation-specific presentation CSS by ZURB */
 	body { padding-bottom: 60px; width: 100%; background: #fff; border: none; max-width: 100%; }
