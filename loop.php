@@ -12,6 +12,7 @@
 		<header>
 			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php reverie_entry_meta(); ?>
+			<div class="comment-count hide-on-phones"><a href="<?php the_permalink(); ?>#comments"><?php comments_number('No Comments', 'One Comment', '<span class="count">% </span>Comments' );?></a></div>
 		</header>
 		<div class="entry-content">
 	<?php if (is_archive() || is_search()) : // Only display excerpts for archives and search ?>
@@ -25,7 +26,7 @@
 				<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p class="tags"><?php the_tags("Posted in "); ?></p><?php } ?>				
 			</div>
 			<div class="sociable">
-				<a href="#respond" class="add_comment">Add a Comment</a>
+				<a href="<?php the_permalink(); ?>#respond" class="add_comment">Add a Comment</a>
 				<a href="#" class="social_network_share">Share With A Friend</a>	
 			</div>
 			<div class="share_bubble">
