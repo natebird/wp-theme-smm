@@ -114,7 +114,15 @@ display:none
 #content {
 	margin-bottom: 2rem;
 	margin-left: 0;
+	margin-left: -1px\9;  /* IE8 and below */ 
 	border-right: 1px solid #F6D9D2;
+	float: left;
+}
+/* Hack for mozilla browsers */
+@-moz-document url-prefix() {
+  #content {
+		margin-left: -1px;
+  }
 }
 #content .entry-content a {
 	color: #C9505A;
@@ -455,6 +463,10 @@ p.tags {
 }
 #comments .comment #respond {
 	margin-top: 20px;
+}
+li.comment ul.children {
+	width: 95%;
+	margin-left: 5%;
 }
 p.tags {
 	text-transform: uppercase;
