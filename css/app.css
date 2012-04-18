@@ -14,24 +14,53 @@
    Shared Styles
 ----------------------------------------- */
 @font-face {
-	font-family: Nautic-Black;
-	src: url(../fonts/Nautik-Black.otf);
+    font-family: 'NautikBlack';
+    src: url('../fonts/nautik-black-webfont.eot');
+    src: url('../fonts/nautik-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nautik-black-webfont.woff') format('woff'),
+         url('../fonts/nautik-black-webfont.ttf') format('truetype'),
+         url('../fonts/nautik-black-webfont.svg#NautikBlack') format('svg');
 }
+
 @font-face {
-	font-family: Nautic-Bold;
-	src: url(../fonts/Nautik-Bold.otf);
+    font-family: 'NautikBold';
+    src: url('../fonts/nautik-bold-webfont.eot');
+    src: url('../fonts/nautik-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nautik-bold-webfont.woff') format('woff'),
+         url('../fonts/nautik-bold-webfont.ttf') format('truetype'),
+         url('../fonts/nautik-bold-webfont.svg#NautikBold') format('svg');
 }
+
 @font-face {
-	font-family: Nautic-Regular;
-	src: url(../fonts/Nautik-Regular.otf);
+    font-family: 'NautikRegular';
+    src: url('../fonts/nautik-regular-webfont.eot');
+    src: url('../fonts/nautik-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nautik-regular-webfont.woff') format('woff'),
+         url('../fonts/nautik-regular-webfont.ttf') format('truetype'),
+         url('../fonts/nautik-regular-webfont.svg#NautikRegular') format('svg');
 }
+
 @font-face {
-	font-family: Quicksand;
-	src: url(../fonts/Quicksand-Book.otf);
+    font-family: 'QuicksandBook';
+    src: url('../fonts/quicksand-book-oblique-webfont.eot');
+    src: url('../fonts/quicksand-book-oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand-book-oblique-webfont.woff') format('woff'),
+         url('../fonts/quicksand-book-oblique-webfont.ttf') format('truetype'),
+         url('../fonts/quicksand-book-oblique-webfont.svg#QuicksandBookOblique') format('svg');
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: 'QuicksandBook';
+    src: url('../fonts/quicksand-book-webfont.eot');
+    src: url('../fonts/quicksand-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand-book-webfont.woff') format('woff'),
+         url('../fonts/quicksand-book-webfont.ttf') format('truetype'),
+         url('../fonts/quicksand-book-webfont.svg#QuicksandBook') format('svg');
 }
 
 body {
-	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
 	font-size: 16px;
 }
 a {
@@ -47,7 +76,7 @@ color: #EF7C64;
 	width: 67.1%;
 }
 h1, h2, h3 {
-	font-family: Nautic-Bold, Helvetica, Arial, sans-serif;
+	font-family: NautikBold, Helvetica, Arial, sans-serif;
 /*	letter-spacing: 0.1em;*/
 	color: #594F4B;
 	text-transform: uppercase;
@@ -63,7 +92,7 @@ h2 a:hover {
 	color: #706561;
 }
 h6 {
-	font-family: Nautic-Regular, Helvetica, Arial, sans-serif;
+	font-family: NautikRegular, Helvetica, Arial, sans-serif;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: #594F4B;
@@ -71,14 +100,6 @@ h6 {
 div.reverie-header {
 	margin: 0;
 	text-align: center;
-}
-#main .reverie-header h1 {
-	overflow: auto;
-  width:100%; 
-  height: 100%;
-	background-size:cover;
-	-moz-background-size:cover;
-	-webkit-background-size:cover;
 }
 #main .reverie-header h1 .blog-name {
 display:none
@@ -89,7 +110,6 @@ display:none
 }
 #logo {
 	border-right: 1px solid #F6D9D2;
-	margin-left: 1px;
 }
 #content {
 	margin-bottom: 2rem;
@@ -115,7 +135,7 @@ dl.nav dd {
 	text-align: center;
 }
 dl.nav dd a {
-	font-family: Nautic-Black, Helvetica, Arial, sans-serif;
+	font-family: NautikBlack, Helvetica, Arial, sans-serif;
 	letter-spacing: 0.1em;
 	color: #594F4B;	
 	text-transform: uppercase;
@@ -149,9 +169,12 @@ dl.nav dd:first-child .arrow-down {
 	left: 0px;
 }
 dl.nav dd {
-	margin-right: 5.2%;
+	margin: 0 2.7%;
 }
-dl.nav dd:nth-child(7) {
+dl.nav dd:first-child {
+	margin-left: 0;
+}
+dl.nav dd:last-child {
 	margin-right: 0;
 }
 #searchform {
@@ -163,7 +186,7 @@ dl.nav dd:nth-child(7) {
 #s, #searchsubmit {
 	background: none;
 	background-color: #EDEBE5;
-	font-family: Nautic-Regular, Helvetica, Arial, sans-serif;
+	font-family: NautikRegular, Helvetica, Arial, sans-serif;
 	letter-spacing: 0.1em;
 	color: #594F4B;
 	padding-left: 10px;
@@ -176,7 +199,9 @@ dl.nav dd:nth-child(7) {
 	float: right;
 	width: 27%;
 	top: -10px;
-	padding: 9px 5px;
+	padding: 10px 5px;
+	font-size: 1.3rem;
+	border: none;
 }
 ul.favorites {
 	margin-top: 15px;
@@ -190,7 +215,7 @@ li.favorite:nth-child(even) {
 	float: right;
 }
 .wpp-post-title {
-	font-family: Nautic-Black, Helvetica, Arial, sans-serif;
+	font-family: NautikBlack, Helvetica, Arial, sans-serif;
 	font-size: 1.5rem;
 	position: absolute;
 	bottom: 0;
@@ -235,7 +260,7 @@ body.page #content .post-box h1, body.archive #content .post-box h1 {
 	margin-bottom: 15px;
 }
 .article-meta {
-	font-family: Nautic-Bold, Helvetica, Arial, sans-serif;
+	font-family: NautikBold, Helvetica, Arial, sans-serif;
 	font-size: 1.25rem;
 	letter-spacing: 0.1em;
 	border-bottom: 1px solid #F6D9D2;
@@ -252,11 +277,11 @@ body.page #content .post-box h1, body.archive #content .post-box h1 {
 	position: absolute;
 	width: 70px;
 	border: 1px solid #F6D9D2;
-	top: 25px;
+	top: 21px;
 	left: -71px;
 	padding: 5px 0 0 0;
 	color: #333;
-	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
 	font-size: 1.1rem;
 	z-index: 1;
 	background-color: white;
@@ -266,12 +291,11 @@ body.page #content .post-box h1, body.archive #content .post-box h1 {
 }
 .comment-count .count {
 	font-size: 2.8rem;
-	font-family: Nautic-Bold, Helvetica, Arial, sans-serif;
+	font-family: NautikBold, Helvetica, Arial, sans-serif;
 }
 .meta-content {
 	width: 35%;
 	border: 1px solid #F6D9D2;
-	padding: 3px 0 0 0;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
@@ -348,11 +372,12 @@ p.tags {
 	position: absolute;
 	right: 6%;
 	top: 75px;
+	z-index: 1;
 	display: none;
 }
 .sociable a {
 	color: #ffffff;
-	font-family: Nautic-Black, Helvetica, Arial, sans-serif;
+	font-family: NautikBlack, Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 }
 .share_bubble li {
@@ -408,7 +433,7 @@ p.tags {
 }
 #comments .comment .comment-reply-link {
 	color: #C94F5A;
-	font-family: Nautic-Bold, Helvetica, Arial, sans-serif;
+	font-family: NautikBold, Helvetica, Arial, sans-serif;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	padding: 7px;
@@ -418,7 +443,7 @@ p.tags {
 	display: block;
 }
 #comments .comment header .fn, #comments .comment header .fn a {
-	font-family: Nautic-Bold, Helvetica, Arial, sans-serif;
+	font-family: NautikBold, Helvetica, Arial, sans-serif;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: #C9505A;
@@ -433,7 +458,7 @@ p.tags {
 }
 p.tags {
 	text-transform: uppercase;
-	font-family: Nautic-Bold, Helvetica, Arial, sans-serif;
+	font-family: NautikBold, Helvetica, Arial, sans-serif;
 	letter-spacing: 0.1em;
 }
 p.tags a {
@@ -452,7 +477,7 @@ p.tags a:hover {
 }
 #new_to_smm {
 	background-color: #C94F5A;
-	width: 65%;
+	width: 75%;
 	text-align: center;
 	padding: 5px 8px;
 	margin: 0 auto 25px auto;
@@ -469,7 +494,7 @@ p.tags a:hover {
 }
 
 #new_to_smm a, .styled_categories a {
-	font-family: Nautic-Black, Helvetica, Arial, sans-serif;
+	font-family: NautikBlack, Helvetica, Arial, sans-serif;
 	font-size: 1.5rem;
 	color: white;
 	text-transform: uppercase;
@@ -488,7 +513,9 @@ p.tags a:hover {
 	position: relative;
 	top: -15px;
 	z-index: 1;
-	background-color: white;}
+	background-color: white;
+	min-width: 180px;
+}
 #social_connections ul {
 	overflow: auto;
 	margin-left: auto;
@@ -505,12 +532,20 @@ p.tags a:hover {
 	margin-left: 4.4%;
 	margin-right: 4.4%;
 	margin-bottom: 0px;
+	zoom: 1;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+#social_connections li:hover { 
+	filter: alpha(opacity=100);
+	opacity: 1.0;
 }
 #social_connections li.instagram {background-position: 0px 193px;}
 #social_connections li.pinterest {background-position: -53px 193px;}
 #social_connections li.email     {background-position: -108px 193px;}
 #social_connections li.facebook  {background-position: -161px 193px;}
 #social_connections li.twitter   {background-position: -216px 193px;}
+#social_connections li.rss       {background-position: -266px 193px;}
 
 ul.styled_categories {
 }
@@ -531,7 +566,7 @@ ul.styled_categories {
 	width: 100%;
 }
 .styled_categories li a {
-	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
 	text-transform: lowercase;
 	display: block;
 	padding: 10px 0 10px 0;
@@ -557,7 +592,7 @@ body.page .post-box h2 {
 ----------------------------------------- */
 #commentform .input-text, #commentform textarea {
 	background: none;
-	font-family: Nautic-Regular, Helvetica, Arial, sans-serif;
+	font-family: NautikRegular, Helvetica, Arial, sans-serif;
 	letter-spacing: 0.1em;
 	color: #594F4B;
 	padding-left: 10px;
@@ -569,7 +604,7 @@ body.page .post-box h2 {
 	float: right;
 }
 input.button {
-	font-family: Nautic-Black, Helvetica, Arial, sans-serif;
+	font-family: NautikBlack, Helvetica, Arial, sans-serif;
 	font-size: 1.5rem;
 	color: white;
 	text-transform: uppercase;
@@ -582,9 +617,39 @@ input.button:hover {
 	opacity: 0.9;
 }
 
-@media handheld, only screen and (max-width: 767px) {
+/* -----------------------------------------
+   Mobile overrides
+----------------------------------------- */
+@media only screen and (max-width: 1023px) {
+	.comment-count { display: none; }
+	dl.nav dd { margin: 0 2.5%; }
+	#social_connections li { margin: 0 4% 0 4%; }
+}
+@media only screen and (max-width: 995px) {
+	dl.nav dd { margin: 0 2.2%; }
+}
+@media only screen and (max-width: 935px) {
+	dl.nav dd { margin: 0 2%; }
+	#social_connections li { margin: 0 3.2% 0 3.2%; }
+}
+@media only screen and (max-width: 910px) {
+	dl.nav dd { margin: 0 1.3%; }
+}
+@media only screen and (max-width: 840px) {
+	dl.nav dd { margin: 0 .8%; }
+}
+@media screen and (max-width: 767px) {
 	h1 { font-size: 32px; font-size: 3.2rem; line-height: 2.7; }
+	dl.nav dd { margin: 0 1.8%; width: 25%; }
+	dl.nav dd:first-child { display: none; }
+	aside { display: none;}
+	header > nav { overflow: auto; height: 100% }
+	#social_connections li { margin: 0 2.4% 0 2.4%; }
+	.meta-content {	width: 45%; }
+	#logo, #content { border: none; }
 }
-@media handheld, only screen and (max-width: 1024px) {
-	.comment-count { left: 0px; }
+@media handheld, only screen and (max-width: 500px) {
+	#logo, #content { border: none; }
+	dl.nav dd { width: 40%; }
 }
+
