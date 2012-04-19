@@ -127,7 +127,7 @@ display:none
 	border-right: 1px solid #F6D9D2;
 }
 #content {
-	margin-bottom: 2rem;
+	padding-bottom: 2rem;
 	margin-left: 0;
 	margin-left: -1px\9;  /* IE8 and below */ 
 	border-right: 1px solid #F6D9D2;
@@ -364,6 +364,10 @@ p.tags {
 	position: relative;
 	padding-top: 20px;
 	margin-bottom: 25px;
+}
+footer#content-info {
+	border-top: 1px solid #F6D9D2;
+	padding-top: 20px;
 }
 .sociable{
 	background-color: #C9505A;
