@@ -93,9 +93,13 @@ h2 a:hover {
 }
 h6 {
 	font-family: NautikRegular, Helvetica, Arial, sans-serif;
+	font-weight: normal;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: #594F4B;
+}
+.post-box h2 {
+	font-weight: normal;
 }
 div.reverie-header {
 	margin: 0;
