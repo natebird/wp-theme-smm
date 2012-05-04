@@ -11,3 +11,6 @@
 	.lt-ie8 input[type=submit].small.button		{ padding: 8px 7px 9px; }
 	.lt-ie8 input[type=submit].medium.button	{ padding: 9px 13px 9px; }
 	.lt-ie8 input[type=submit].large.button		{ padding: 9px 18px 10px; }
+
+	.lt-ie8 #content { margin-left: -2px; }
+	.lt-ie8	#logo { margin-left: -2px; }
