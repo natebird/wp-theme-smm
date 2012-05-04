@@ -14,53 +14,76 @@
    Shared Styles
 ----------------------------------------- */
 @font-face {
-    font-family: 'NautikBlack';
-    src: url('../fonts/nautik-black-webfont.eot');
-    src: url('../fonts/nautik-black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/nautik-black-webfont.woff') format('woff'),
-         url('../fonts/nautik-black-webfont.ttf') format('truetype'),
-         url('../fonts/nautik-black-webfont.svg#NautikBlack') format('svg');
-}
-
-@font-face {
-    font-family: 'NautikBold';
+    font-family: 'Nautik';
     src: url('../fonts/nautik-bold-webfont.eot');
     src: url('../fonts/nautik-bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/nautik-bold-webfont.woff') format('woff'),
          url('../fonts/nautik-bold-webfont.ttf') format('truetype'),
          url('../fonts/nautik-bold-webfont.svg#NautikBold') format('svg');
+		font-weight: 700;
+		font-style: normal;
 }
-
 @font-face {
-    font-family: 'NautikRegular';
+    font-family: 'Nautik';
+    src: url('../fonts/nautik-black-webfont.eot');
+    src: url('../fonts/nautik-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nautik-black-webfont.woff') format('woff'),
+         url('../fonts/nautik-black-webfont.ttf') format('truetype'),
+         url('../fonts/nautik-black-webfont.svg#NautikBlack') format('svg');
+		font-weight: 900;
+		font-style: normal;
+}
+@font-face {
+    font-family: 'Nautik';
     src: url('../fonts/nautik-regular-webfont.eot');
     src: url('../fonts/nautik-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/nautik-regular-webfont.woff') format('woff'),
          url('../fonts/nautik-regular-webfont.ttf') format('truetype'),
          url('../fonts/nautik-regular-webfont.svg#NautikRegular') format('svg');
+		font-weight: 400;
+		font-style: normal;
 }
-
 @font-face {
-    font-family: 'QuicksandBook';
+    font-family: 'Quicksand';
     src: url('../fonts/quicksand-book-oblique-webfont.eot');
     src: url('../fonts/quicksand-book-oblique-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/quicksand-book-oblique-webfont.woff') format('woff'),
          url('../fonts/quicksand-book-oblique-webfont.ttf') format('truetype'),
          url('../fonts/quicksand-book-oblique-webfont.svg#QuicksandBookOblique') format('svg');
+		font-weight: normal;
     font-style: italic, oblique;
 }
-
 @font-face {
-    font-family: 'QuicksandBook';
+    font-family: 'Quicksand';
+    src: url('../fonts/quicksand_bold_oblique-webfont.eot');
+    src: url('../fonts/quicksand_bold_oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand_bold_oblique-webfont.woff') format('woff'),
+         url('../fonts/quicksand_bold_oblique-webfont.ttf') format('truetype');
+		font-weight: bold;
+    font-style: italic, oblique;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/quicksand_bold-webfont.eot');
+    src: url('../fonts/quicksand_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand_bold-webfont.woff') format('woff'),
+         url('../fonts/quicksand_bold-webfont.ttf') format('truetype');
+		font-weight: bold;
+		font-style: normal;
+}
+@font-face {
+    font-family: 'Quicksand';
     src: url('../fonts/quicksand-book-webfont.eot');
     src: url('../fonts/quicksand-book-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/quicksand-book-webfont.woff') format('woff'),
          url('../fonts/quicksand-book-webfont.ttf') format('truetype'),
          url('../fonts/quicksand-book-webfont.svg#QuicksandBook') format('svg');
+		font-weight: normal;
+		font-style: normal;
 }
 
 body {
-	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
 	font-size: 16px;
 }
 ::-moz-selection {
@@ -80,6 +103,10 @@ color: #C9505A;
 a:hover {
 color: #EF7C64;
 }
+strong {
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
 .column, .columns {
 	margin-left: 2.5%;
 }
@@ -87,7 +114,8 @@ color: #EF7C64;
 	width: 67.1%;
 }
 h1, h2, h3 {
-	font-family: NautikBold, Helvetica, Arial, sans-serif;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 900;
 /*	letter-spacing: 0.1em;*/
 	color: #594F4B;
 	text-transform: uppercase;
@@ -98,13 +126,14 @@ h1 {
 }
 h1 a, h2 a {
 	color: #594F4B;
+	font-weight: bold;
 }
 h2 a:hover {
 	color: #706561;
 }
 h6 {
-	font-family: NautikRegular, Helvetica, Arial, sans-serif;
-	font-weight: normal;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 900;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: #594F4B;
@@ -125,6 +154,7 @@ display:none
 }
 #logo {
 	border-right: 1px solid #F6D9D2;
+	margin-left: -1px\9;  /* IE8 and below */ 
 }
 #content {
 	padding-bottom: 2rem;
@@ -138,6 +168,9 @@ display:none
   #content {
 		margin-left: -1px;
   }
+	#logo {
+		margin-left: -1px;
+	}
 }
 #content .entry-content a {
 	color: #C9505A;
@@ -154,14 +187,16 @@ header > nav {
 	max-width: 980px;
 }
 dl.nav dd {
-	padding: 20px 10px;
 	text-align: center;
 }
 dl.nav dd a {
-	font-family: NautikBlack, Helvetica, Arial, sans-serif;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 900;  
 	letter-spacing: 0.1em;
 	color: #594F4B;	
 	text-transform: uppercase;
+	padding: 20px 10px;
+	display: block;
 }
 dl.nav dd:first-child {
 	background-color: #C9505A;
@@ -209,7 +244,8 @@ dl.nav dd:last-child {
 #s, #searchsubmit {
 	background: none;
 	background-color: #EDEBE5;
-	font-family: NautikRegular, Helvetica, Arial, sans-serif;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 400;
 	letter-spacing: 0.1em;
 	color: #594F4B;
 	padding-left: 10px;
@@ -222,7 +258,7 @@ dl.nav dd:last-child {
 	float: right;
 	width: 27%;
 	top: -10px;
-	padding: 10px 5px;
+	padding: 9px 5px;
 	font-size: 1.3rem;
 	border: none;
 }
@@ -238,7 +274,8 @@ li.favorite:nth-child(even) {
 	float: right;
 }
 .wpp-post-title {
-	font-family: NautikBlack, Helvetica, Arial, sans-serif;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 900;
 	font-size: 1.5rem;
 	position: absolute;
 	bottom: 0;
@@ -283,7 +320,8 @@ body.page #content .post-box h1, body.archive #content .post-box h1 {
 	margin-bottom: 15px;
 }
 .article-meta {
-	font-family: NautikBold, Helvetica, Arial, sans-serif;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 700;
 	font-size: 1.25rem;
 	letter-spacing: 0.1em;
 	border-bottom: 1px solid #F6D9D2;
@@ -304,7 +342,7 @@ body.page #content .post-box h1, body.archive #content .post-box h1 {
 	left: -71px;
 	padding: 5px 0 0 0;
 	color: #333;
-	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
 	font-size: 1.1rem;
 	z-index: 1;
 	background-color: white;
@@ -313,8 +351,9 @@ body.page #content .post-box h1, body.archive #content .post-box h1 {
 	color: #555555;
 }
 .comment-count .count {
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 700;
 	font-size: 2.8rem;
-	font-family: NautikBold, Helvetica, Arial, sans-serif;
 }
 .meta-content {
 	width: 35%;
@@ -386,6 +425,10 @@ footer#content-info {
 	zoom: 1;
 	filter: alpha(opacity=100);
 	opacity: 1.0;
+	color: #ffffff;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 900;
+	text-transform: uppercase;
 }
 .sociable a.social_network_share {
 	float: right;
@@ -401,11 +444,6 @@ footer#content-info {
 	top: 75px;
 	z-index: 1;
 	display: none;
-}
-.sociable a {
-	color: #ffffff;
-	font-family: NautikBlack, Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
 }
 .share_bubble li {
 	background-image: url('../images/sprites.png');
@@ -460,7 +498,8 @@ footer#content-info {
 }
 #comments .comment .comment-reply-link {
 	color: #C94F5A;
-	font-family: NautikBold, Helvetica, Arial, sans-serif;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 700;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	padding: 7px;
@@ -470,7 +509,8 @@ footer#content-info {
 	display: block;
 }
 #comments .comment header .fn, #comments .comment header .fn a {
-	font-family: NautikBold, Helvetica, Arial, sans-serif;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 700;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: #C9505A;
@@ -489,7 +529,8 @@ li.comment ul.children {
 }
 p.tags {
 	text-transform: uppercase;
-	font-family: NautikBold, Helvetica, Arial, sans-serif;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 700;
 	letter-spacing: 0.1em;
 }
 p.tags a {
@@ -514,18 +555,19 @@ p.tags a:hover {
 	margin: 0 auto 25px auto;
 	box-shadow: 8px 8px 0px #EDEBE5;
 	zoom: 1;
-	filter: alpha(opacity=70);
-	opacity: 0.7;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
 }
 #new_to_smm:hover {
 	background-color: #C94F5A;
 	zoom: 1;
-	filter: alpha(opacity=90);
-	opacity: 0.9;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
 }
 
 #new_to_smm a, .styled_categories a {
-	font-family: NautikBlack, Helvetica, Arial, sans-serif;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 900;
 	font-size: 1.5rem;
 	color: white;
 	text-transform: uppercase;
@@ -560,8 +602,8 @@ p.tags a:hover {
 #social_connections li {
 	background-image: url('../images/sprites.png');
 	float: left;
-	margin-left: 4.4%;
-	margin-right: 4.4%;
+	margin-left: 4.2%;
+	margin-right: 4.2%;
 	margin-bottom: 0px;
 	zoom: 1;
 	filter: alpha(opacity=70);
@@ -597,7 +639,8 @@ ul.styled_categories {
 	width: 100%;
 }
 .styled_categories li a {
-	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	font-family: Quicksand, Helvetica, Arial, sans-serif;
+	font-weight: normal;
 	text-transform: lowercase;
 	display: block;
 	padding: 10px 0 10px 0;
@@ -606,15 +649,36 @@ ul.styled_categories {
 /* -----------------------------------------
    Tutorials
 ----------------------------------------- */
-body.page .post-box img {
-	width: 200px;
-	margin: 1% 0 0 0;
+body.page .image-grid li {
+	position: relative;
+	float: left;
+	list-style: none;
 }
-body.page .post-box a:nth-child(3n+2) img {
+body.page .image-grid img:nth-child(3n+2) {
 	margin: 1% 1% 0 1%;
 }
+body.page .page-grid-list-title {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 1.5rem;
+	text-align: center;
+	background: #C9505A;
+	left: 0;
+	color: white;
+	padding: 3px 5px;
+	width: 190px;
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+body.page .image-grid img {
+	width: 200px;
+}
 
-body.page .post-box h2 {
+body.page .image-grid h2 {
 	margin-top: 35px;
 }
 
@@ -623,7 +687,8 @@ body.page .post-box h2 {
 ----------------------------------------- */
 #commentform .input-text, #commentform textarea {
 	background: none;
-	font-family: NautikRegular, Helvetica, Arial, sans-serif;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 400;
 	letter-spacing: 0.1em;
 	color: #594F4B;
 	padding-left: 10px;
@@ -635,11 +700,15 @@ body.page .post-box h2 {
 	float: right;
 }
 input.button {
-	font-family: NautikBlack, Helvetica, Arial, sans-serif;
+	font-family: Nautik, Helvetica, Arial, sans-serif;
+	font-weight: 900;
 	font-size: 1.5rem;
 	color: white;
 	text-transform: uppercase;
 	background-color: #C94F5A;
+	zoom: 1;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
 }
 input.button:hover {
 	background-color: #C94F5A;
