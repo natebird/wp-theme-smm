@@ -27,7 +27,7 @@
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if ($wp_query->max_num_pages > 1) : ?>
 	<nav id="post-nav">
-		<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div>
-		<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div>
+		<?php if (next_posts_link()) : ?><div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div><?php endif; ?>
+		<?php if (previous_posts_link()) : ?><div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div><?php endif; ?>
 	</nav>
 <?php endif; ?>

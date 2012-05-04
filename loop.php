@@ -30,14 +30,7 @@
 				<a href="#" class="social_network_share">Share With A Friend</a>	
 			</div>
 			<div class="share_bubble">
-				<ul>
-					<li class="email"><a href="#"></a></li>
-					<li class="twitter"><a href="#"></a></li>
-					<li class="facebook"><a href="#"></a></li>
-					<li class="google"><a href="#"></a></li>
-					<li class="stumbleupon"><a href="#"></a></li>
-					<li class="pinterest"><a href="#"></a></li>
-				</ul>
+				<?php echo do_shortcode('[social_share/]'); ?>
 			</div>
 		</footer>
 		<div class="divider"></div>
@@ -47,7 +40,7 @@
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if ($wp_query->max_num_pages > 1) : ?>
 	<nav id="post-nav">
-		<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div>
-		<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div>
+		<?php if (next_posts_link()) : ?><div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div><?php endif; ?>
+		<?php if (previous_posts_link()) : ?><div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div><?php endif; ?>
 	</nav>
 <?php endif; ?>
