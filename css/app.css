@@ -718,6 +718,7 @@ input.button:hover {
 @media only screen and (max-width: 935px) {
 	dl.nav dd { margin: 0 2.5%; }
 	#social_connections li { margin: 0 3.2% 0 3.2%; }
+	.meta-content { width: 45%; }
 }
 @media only screen and (max-width: 910px) {
 	dl.nav dd { margin: 0 2.2%; }
@@ -733,11 +734,11 @@ input.button:hover {
 	aside { display: none;}
 	header > nav { overflow: auto; height: 100% }
 	#social_connections li { margin: 0 2.4% 0 2.4%; }
-	.meta-content { width: 45%; }
 	#logo, #content { border: none; }
 }
 @media handheld, only screen and (max-width: 500px) {
 	#logo, #content { border: none; }
 	dl.nav dd { width: 40%; }
+	.meta-content { width: 65%; }
 }
 
