@@ -41,13 +41,15 @@ foreach ($sidebars as $sidebar) {
 
 // return entry meta information for posts, used by multiple loops.
 function reverie_entry_meta() {
-	echo '<div class="article-meta">
-					<div class="meta-content">
-						<span class="byline author vcard">'. __('By', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('id')) .'" rel="author" class="fn">'. get_the_author() .'</a></span>
-						on 
-						<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('%s', 'reverie'), get_the_time('F j, Y')) .'</time>
-					</div>
-				</div>';
+  echo '
+      <div class="article-meta">
+        <div class="meta-content">
+          <span class="byline author vcard">'. __('By', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('id')) .'" rel="author" class="fn">'. get_the_author() .'</a></span>
+          on 
+          <time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('%s', 'reverie'), get_the_time('F j, Y')) .'</time><br/>
+          <span class="comment_count">with <a href="'. get_permalink() .'#comments">'. get_comments_number() .' comments</a></span>
+        </div>
+      </div>';
 }
 
 /* Customized the output of caption, you can remove the filter to restore back to the WP default output. Courtesy of DevPress. http://devpress.com/blog/captions-in-wordpress/ */

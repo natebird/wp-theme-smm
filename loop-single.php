@@ -4,7 +4,6 @@
 		<header>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php reverie_entry_meta(); ?>
-			<div class="comment-count"><a href="#comments"><?php comments_number('No Comments', 'One Comment', '<span class="count">% </span>Comments' );?></a></div>
 		</header>
 		<div class="entry-content">
 			<?php the_content(); ?>

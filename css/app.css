@@ -337,36 +337,18 @@ body.page #content .post-box h1, body.archive #content .post-box h1 {
 .article-meta .author, .article-meta time {
 	text-transform: uppercase;
 }
-.comment-count {
-	position: absolute;
-	width: 70px;
-	border: 1px solid #F6D9D2;
-	top: 21px;
-	left: -71px;
-	padding: 5px 0 0 0;
-	color: #333;
-	font-family: Quicksand, Helvetica, Arial, sans-serif;
-	font-size: 1.1rem;
-	z-index: 1;
-	background-color: white;
-}
-.comment-count a {
-	color: #555555;
-}
-.comment-count .count {
-	font-family: Nautik, Helvetica, Arial, sans-serif;
-	font-weight: 700;
-	font-size: 2.8rem;
-}
 .meta-content {
 	width: 35%;
 	border: 1px solid #F6D9D2;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	top: 11px;
+	top: 17px;
 	z-index: 1;
 	background-color: white;
+}
+.comment_count {
+	text-transform: uppercase;
 }
 .post-previous {
 	background-image: url('../images/sprites.png');
@@ -401,6 +383,9 @@ p.tags {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+.post-box h1 {
+	font-weight: 900;
 }
 .post-box article > footer {
 	position: relative;
@@ -724,7 +709,6 @@ input.button:hover {
    Mobile overrides
 ----------------------------------------- */
 @media only screen and (max-width: 1023px) {
-	.comment-count { display: none; }
 	dl.nav dd { margin: 0 3%; }
 	#social_connections li { margin: 0 3.9% 0 3.9%; }
 }
@@ -749,7 +733,7 @@ input.button:hover {
 	aside { display: none;}
 	header > nav { overflow: auto; height: 100% }
 	#social_connections li { margin: 0 2.4% 0 2.4%; }
-	.meta-content {	width: 45%; }
+	.meta-content { width: 45%; }
 	#logo, #content { border: none; }
 }
 @media handheld, only screen and (max-width: 500px) {
