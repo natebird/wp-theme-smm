@@ -185,7 +185,7 @@ display:none
 	border-bottom: 1px solid #F6D9D2;
 }
 header > nav {
-	height: 60px;
+	height: 58px;
 	margin: 0 auto;
 	max-width: 980px;
 }
@@ -230,7 +230,7 @@ dl.nav dd:first-child .arrow-down {
 	left: 0px;
 }
 dl.nav dd {
-	margin: 0 3.2%;
+	margin: 0 3%;
 }
 dl.nav dd:first-child {
 	margin-left: 0;
@@ -391,6 +391,7 @@ p.tags {
 	position: relative;
 	padding-top: 20px;
 	margin-bottom: 25px;
+	clear: both;
 }
 footer#content-info {
 	border-top: 1px solid #F6D9D2;
