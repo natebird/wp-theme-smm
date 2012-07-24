@@ -1,7 +1,7 @@
 /* Foundation v2.2 http://foundation.zurb.com */
 /* Artfully masterminded by ZURB  */
 
-/* -------------------------------------------------- 
+/* --------------------------------------------------
    Table of Contents
 -----------------------------------------------------
 :: Shared Styles
@@ -154,12 +154,12 @@ display:none
 }
 #logo {
 	border-right: 1px solid #F6D9D2;
-	margin-left: -1px\9;  /* IE8 and below */ 
+	margin-left: -1px\9;  /* IE8 and below */
 }
 #content {
 	padding-bottom: 2rem;
 	margin-left: 0;
-	margin-left: -1px\9;  /* IE8 and below */ 
+	margin-left: -1px\9;  /* IE8 and below */
 	border-right: 1px solid #F6D9D2;
 	float: left;
 }
@@ -194,16 +194,16 @@ dl.nav dd {
 }
 dl.nav dd a {
 	font-family: Nautik, Helvetica, Arial, sans-serif;
-	font-weight: 900;  
+	font-weight: 900;
 	letter-spacing: 0.1em;
-	color: #594F4B;	
+	color: #594F4B;
 	text-transform: uppercase;
 	padding: 20px 10px;
 	display: block;
 }
 dl.nav dd:first-child {
 	background-color: #C9505A;
-	position: relative;	
+	position: relative;
 }
 dl.nav dd:first-child a {
 	color: #ffffff;
@@ -293,17 +293,17 @@ li.favorite:nth-child(even) {
 }
 li.favorite a:hover {
 	filter: alpha(opacity=90);
-	opacity: 0.9;	
+	opacity: 0.9;
 }
-.post-box article .entry-content, 
-.post-box article > footer, 
-.post-box article > #comments, 
+.post-box article .entry-content,
+.post-box article > footer,
+.post-box article > #comments,
 .post-box article > #respond,
 body.page .post-box
 {
 	/* This provides padding from the right border */
 	padding: 0 2.5% 0 0;
-} 
+}
 #content .post-box .post header {
 	text-align: center;
 	position: relative;
@@ -545,10 +545,10 @@ p.tags {
 }
 p.tags a {
 	text-transform: lowercase;
-	color: #C9505A;	
+	color: #C9505A;
 }
 p.tags a:hover {
-	color: #EF7C64;	
+	color: #EF7C64;
 }
 /* -----------------------------------------
    Page Name 1
@@ -612,14 +612,14 @@ p.tags a:hover {
 #social_connections li {
 	background-image: url('../images/sprites.png');
 	float: left;
-	margin-left: 4.2%;
-	margin-right: 4.2%;
+	margin-left: 2.4%;
+	margin-right: 2.4%;
 	margin-bottom: 0px;
 	zoom: 1;
 	filter: alpha(opacity=70);
 	opacity: 0.7;
 }
-#social_connections li:hover { 
+#social_connections li:hover {
 	filter: alpha(opacity=100);
 	opacity: 1.0;
 }
@@ -733,30 +733,29 @@ input.button:hover {
 @media only screen and (max-width: 1023px) {
 	.comment-count { display: none; }
 	dl.nav dd { margin: 0 3%; }
-	#social_connections li { margin: 0 3.9% 0 3.9%; }
 }
 @media only screen and (max-width: 995px) {
 	dl.nav dd { margin: 0 2.8%; }
 }
 @media only screen and (max-width: 935px) {
 	dl.nav dd { margin: 0 2.5%; }
-	#social_connections li { margin: 0 3.2% 0 3.2%; }
+	#social_connections li { margin: 0 1.9%; }
 	.meta-content { width: 45%; }
 }
 @media only screen and (max-width: 910px) {
 	dl.nav dd { margin: 0 2.2%; }
-	#social_connections li { margin: 0 2.8%; }
+	#social_connections li { margin: 0 1.5%; }
 }
 @media only screen and (max-width: 840px) {
 	dl.nav dd { margin: 0 1.6%; }
-	#social_connections li { margin: 0 2.4%; }
+	#social_connections li { margin: 0 .9%; }
 }
 @media screen and (max-width: 767px) {
 	h1 { font-size: 32px; font-size: 3.2rem; line-height: 2.7; }
 	dl.nav dd:first-child { display: none; }
 	aside { display: none;}
 	header > nav { overflow: auto; height: 100% }
-	#social_connections li { margin: 0 2.4% 0 2.4%; }
+	#social_connections li { margin: 0 .5%; }
 	#logo, #content { border: none; }
 }
 @media handheld, only screen and (max-width: 500px) {
