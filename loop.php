@@ -3,7 +3,7 @@
 	<div class="notice">
 		<p class="bottom"><?php _e('Sorry, no results were found.', 'reverie'); ?></p>
 	</div>
-	<?php get_search_form(); ?>	
+	<?php get_search_form(); ?>
 <?php endif; ?>
 
 <?php /* Start loop */ ?>
@@ -12,7 +12,7 @@
 		<header>
 			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php reverie_entry_meta(); ?>
-			<div class="comment-count"><a href="#comments"><?php comments_number('No Comments', 'One Comment', '<span class="count">% </span>Comments' );?></a></div>
+			<div class="comment-count"><a href="'. get_permalink() .'#comments"><?php comments_number('No Comments', 'One Comment', '<span class="count">% </span>Comments' );?></a></div>
 		</header>
 		<div class="entry-content">
 	<?php if (is_archive() || is_search()) : // Only display excerpts for archives and search ?>
@@ -23,18 +23,18 @@
 		</div>
 		<footer>
 			<div class="categorized">
-				<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p class="tags"><?php the_tags("Posted in "); ?></p><?php } ?>				
+				<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p class="tags"><?php the_tags("Posted in "); ?></p><?php } ?>
 			</div>
 			<div class="sociable">
 				<a href="<?php the_permalink(); ?>#respond" class="add_comment">Add a Comment</a>
-				<a href="#" class="social_network_share">Share With A Friend</a>	
+				<a href="#" class="social_network_share">Share With A Friend</a>
 			</div>
 			<div class="share_bubble">
 				<?php echo do_shortcode('[social_share/]'); ?>
 			</div>
 		</footer>
 		<div class="divider"></div>
-	</article>	
+	</article>
 <?php endwhile; // End the loop ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
