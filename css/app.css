@@ -475,6 +475,14 @@ footer#content-info {
 .share_bubble li.google      {background-position: 312px 188px;}
 .share_bubble li.stumbleupon {background-position: 270px 188px;}
 .share_bubble li.pinterest   {background-position: 226px 188px;}
+
+/* Hacks to hide default share button graphics */
+.share_bubble li.pinterest iframe { opacity: 0; }
+.share_bubble li.facebook iframe { opacity: 0; }
+.share_bubble li.google iframe { opacity: 0; }
+.share_bubble li.twitter iframe { opacity: 0; }
+.share_bubble li.stumbleupon iframe { opacity: 0; }
+
 .divider {background-image: none;}
 #comments .comment {
 	margin-top: 15px;

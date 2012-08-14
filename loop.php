@@ -30,7 +30,13 @@
 				<a href="#" class="social_network_share">Share With A Friend</a>
 			</div>
 			<div class="share_bubble">
-				<?php echo do_shortcode('[social_share/]'); ?>
+				<ul>
+					<li class="pinterest">	<?php echo do_shortcode("[socialize service='pinterest']"); 	?></li>
+					<li class="facebook">		<?php echo do_shortcode("[socialize service='facebook']"); 		?></li>
+					<li class="twitter">		<?php echo do_shortcode("[socialize service='twitter']"); 		?></li>
+					<li class="stumbleupon"><?php echo do_shortcode("[socialize service='stumbleupon']"); ?></li>
+					<li class="google">			<?php echo do_shortcode("[socialize service='googleplus']"); 	?></li>
+				</ul>
 			</div>
 		</footer>
 		<div class="divider"></div>

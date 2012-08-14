@@ -19,12 +19,11 @@
 			</div>
 			<div class="share_bubble">
 				<ul>
-					<li class="email"><a href="#"></a></li>
-					<li class="twitter"><a href="#"></a></li>
-					<li class="facebook"><a href="#"></a></li>
-					<li class="google"><a href="#"></a></li>
-					<li class="stumbleupon"><a href="#"></a></li>
-					<li class="pinterest"><a href="#"></a></li>
+					<li class="pinterest">	<?php echo do_shortcode("[socialize service='pinterest']"); 	?></li>
+					<li class="facebook">		<?php echo do_shortcode("[socialize service='facebook']"); 		?></li>
+					<li class="twitter">		<?php echo do_shortcode("[socialize service='twitter']"); 		?></li>
+					<li class="stumbleupon"><?php echo do_shortcode("[socialize service='stumbleupon']"); ?></li>
+					<li class="google">			<?php echo do_shortcode("[socialize service='googleplus']"); 	?></li>
 				</ul>
 			</div>
 			<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'reverie'), 'after' => '</p></nav>' )); ?>
