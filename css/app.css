@@ -111,7 +111,7 @@ strong {
 	margin-left: 2.5%;
 }
 .row .eight {
-	width: 67.1%;
+	width: 67%;
 }
 h1, h2, h3 {
 	font-family: Nautik, Helvetica, Arial, sans-serif;
@@ -281,7 +281,7 @@ li.favorite:nth-child(even) {
 	font-weight: 900;
 	font-size: 1.5rem;
 	position: absolute;
-	bottom: 0;
+	bottom: 5px;
 	background: #C9505A;
 	left: 0;
 	color: white;
