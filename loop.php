@@ -12,7 +12,7 @@
 		<header>
 			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php reverie_entry_meta(); ?>
-			<div class="comment-count"><a href="'. get_permalink() .'#comments"><?php comments_number('No Comments', 'One Comment', '<span class="count">% </span>Comments' );?></a></div>
+			<div class="comment-count"><a href="<?php the_permalink(); ?>#comments"><?php comments_number('No Comments', 'One Comment', '<span class="count">% </span>Comments' );?></a></div>
 		</header>
 		<div class="entry-content">
 	<?php if (is_archive() || is_search()) : // Only display excerpts for archives and search ?>
