@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Tutorials
+Template Name: Grid
 */
 get_header(); ?>
 
@@ -10,7 +10,7 @@ get_header(); ?>
 		<div id="content" class="eight columns" role="main">
 
 			<div class="image-grid post-box">
-				<?php the_content(); ?>
+				<?php get_template_part('loop', 'page'); ?>
 			</div>
 
 		</div><!-- End Content row -->
